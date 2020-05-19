@@ -81,9 +81,8 @@ function renderHTML(path, response) {
     });
 }
 
-http.createServer( function (request, response){
+app.http.createServer( function (request, response){
 	response.writeHead(200,{"Content-Type":"text/html"})
-	renderHTML('./index.html', request);
 	response.end("Hello\n");
 }).listen(process.env.PORT)
 app.listen(3000, function () {
