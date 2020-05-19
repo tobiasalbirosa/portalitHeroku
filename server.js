@@ -3,7 +3,7 @@ const fs = require('fs')
 const fsI = require('fs')
 const path = require('path')
 const app = express()
-
+var http = require('http');
 app.get('/', function(req, res) {
 	res.sendFile(path.join(__dirname + '/index.html'))
 })
@@ -64,7 +64,10 @@ app.get('/image', function(req, res) {
 		fsI.createReadStream(path).pipe(res)
 	}
 })
-
+http.createServer( function (request, response){
+	response.writeHead(200,{"Content-Type":"text/plain"})
+	response.end("Hello\n");
+}).listen(process.env.PORT)
 app.listen(3000, function () {
 	console.log('App is running on port 3000')
 })

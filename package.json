@@ -30,7 +30,7 @@
     "nodejs"
   ],
   "author": "tobjj",
-  "license": "MIT",
+  "license": "ISC",
   "engines": {
     "node": "10.x"
   },
