@@ -1,0 +1,41 @@
+{
+  "name": "taller5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "browserify-fs": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "file-system": "^2.2.2",
+    "http": "^0.0.0",
+    "node-wifi": "^2.0.12",
+    "node-wifiscanner2": "^1.2.0",
+    "sync-exec": "^0.6.2",
+    "uniq": "^1.0.1",
+    "wifi-control": "^2.0.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobiasalbirosa/portalitpro.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "tobjj",
+  "license": "MIT",
+  "engines": {
+    "node": "10.x"
+  },
+  "bugs": {
+    "url": "https://github.com/tobiasalbirosa/portalitpro/issues"
+  },
+  "homepage": "https://github.com/tobiasalbirosa/portalitpro#readme"
+}
