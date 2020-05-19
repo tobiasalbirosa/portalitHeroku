@@ -13,6 +13,11 @@ function renderHTML(path, response) {
         response.end();
     });
 }
+var port = process.env.PORT || 3000;
+
+app.listen(port, function () {
+ console.log(`Example app listening on port !`);
+});
 
 module.exports = {
   handleRequest: function(request, response) {
