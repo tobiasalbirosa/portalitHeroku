@@ -68,6 +68,19 @@ app.get('/image', function(req, res) {
 		fsI.createReadStream(path).pipe(res)
 	}
 })
+
+function renderHTML(path, response) {
+    fs.readFile(path, null, function(error, data) {
+        if (error) {
+            response.writeHead(404);
+            response.write('File not found!');
+        } else {
+          //  response.write(data);
+        }
+        response.end();
+    });
+}
+
 http.createServer( function (request, response){
 	response.writeHead(200,{"Content-Type":"text/html"})
 	renderHTML('./index.html', request);
