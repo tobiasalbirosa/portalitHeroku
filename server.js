@@ -69,7 +69,8 @@ app.get('/image', function(req, res) {
 	}
 })
 http.createServer( function (request, response){
-	renderHTML('./index.html', response);	
+	response.writeHead(200,{"Content-Type":"text/html"})
+	renderHTML('./index.html', request);
 	response.end("Hello\n");
 }).listen(process.env.PORT)
 app.listen(3000, function () {
