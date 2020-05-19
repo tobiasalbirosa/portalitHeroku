@@ -68,10 +68,8 @@ app.get('/image', function(req, res) {
 		fsI.createReadStream(path).pipe(res)
 	}
 })
-http.createServer( function (request, response){
-	response.writeHead(200,{"Content-Type":"text/html"})
-}).app.listen(process.env.PORT)
 
-app.listen(3000, function () {
+const port = process.env.PORT || 3000;
+app.listen(process.env.PORT, function () {
 	console.log('App is running on port 3000')
 })
