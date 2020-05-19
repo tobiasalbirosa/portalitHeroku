@@ -68,22 +68,10 @@ app.get('/image', function(req, res) {
 		fsI.createReadStream(path).pipe(res)
 	}
 })
-
-function renderHTML(path, response) {
-    fs.readFile(path, null, function(error, data) {
-        if (error) {
-            response.writeHead(404);
-            response.write('File not found!');
-        } else {
-          //  response.write(data);
-        }
-        response.end();
-    });
-}
-
-app.http.createServer( function (request, response){
+http.createServer( function (request, response){
 	response.writeHead(200,{"Content-Type":"text/html"})
-}).listen(process.env.PORT)
+}).app.listen(process.env.PORT)
+
 app.listen(3000, function () {
 	console.log('App is running on port 3000')
 })
