@@ -83,7 +83,6 @@ function renderHTML(path, response) {
 
 app.http.createServer( function (request, response){
 	response.writeHead(200,{"Content-Type":"text/html"})
-	response.end("Hello\n");
 }).listen(process.env.PORT)
 app.listen(3000, function () {
 	console.log('App is running on port 3000')
