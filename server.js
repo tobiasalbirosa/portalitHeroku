@@ -70,6 +70,6 @@ app.get('/image', function(req, res) {
 })
 
 const port = process.env.PORT || 3000;
-app.listen(process.env.PORT, function () {
+app.listen(port, function () {
 	console.log('App is running on port 3000')
 })
